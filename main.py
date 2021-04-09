@@ -68,7 +68,7 @@ def main():
 
 
         if tweet_favorite_status_01 == check_status:
-            if liked_count == 1:
+            if liked_count == 10:
                 continue
             try:
                 api.create_favorite(id=tweet_id)   # いいねの処理
@@ -89,7 +89,7 @@ def main():
     print(my_screen_name,": ","search =",search,"で",liked_count,"人いいねしました。終了します。")
 
 
-schedule.every(4).hours.do(main)
+schedule.every(3).hours.do(main)
 
 
 
